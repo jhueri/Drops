@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="home-body">
+    <div class="card">
+        <header>
+            <h1 class="home-header">My To Do List</h1>
+            <img src="images/dropslogo.png" class="header-logo"/>
+        </header>
+        <form action="">
+            <input type="text" class="todo-input">
+            <button class="todo-button" type="submit">
+                <i class="fas fa-plus-circle fa-lg"></i>
+            </button>
+            <div class="select">
+                <select name="todos" class="filter-todo">
+                    <option value="all">All</option>
+                    <option value="water">Water</option>
+                    <option value="energy">Energy</option>
+                </select>
+            </div>
+        </form>
+
+        <div class="todo-container">
+            <ul class="todo-list"></ul>
+        </div>
+        
+        <nav> <!--Nav Bar here-->
+            <ul>
+            <li><a href="homepage.html" class="nav-icon">
+                <img src="images/home-icon.png" class="nav-icon">
+            </a></li>
+                <li><a href="tips.html" class="nav-icon">
+                    <img src="images/tips-icon.png" class="nav-icon" />
+                    </a></li>
+            <li><a href="learn.html" class="next-page">
+                <img src="images/learn-icon.png" class="nav-icon">
+            </a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <script src="./script.js"></script>
+    
+</body>
+</html>
