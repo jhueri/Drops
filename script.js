@@ -3,7 +3,6 @@ const todoButton = document.querySelector(".todo-button");
 const todoList = document.querySelector(".todo-list");
 const filterOption = document.querySelector(".filter-todo");
 
-// Task suggestions for each category
 const waterTasks = [
     "Used a reusable water bottle",
     "Leaks are fixed",
@@ -18,7 +17,7 @@ const energyTasks = [
 
 document.addEventListener("DOMContentLoaded", () => {
     getLocalTodos();
-    addInitialTasks(); // Add initial tasks
+    addInitialTasks(); 
 });
 todoButton.addEventListener("click", addTodo);
 todoList.addEventListener("click", deleteCheck);
@@ -33,7 +32,6 @@ function addTodo(event) {
     newTodo.classList.add("todo-item");
     todoDiv.appendChild(newTodo);
 
-    // Add buttons
     const completedButton = document.createElement("button");
     completedButton.innerHTML = '<i class="fas fa-check-circle"></i>';
     completedButton.classList.add("complete-btn");
@@ -46,7 +44,6 @@ function addTodo(event) {
 
     todoList.appendChild(todoDiv);
 
-    // Save to local storage
     saveLocalTodos(todoInput.value);
 
     todoInput.value = "";
@@ -90,7 +87,6 @@ function filterTodo(e) {
     });
 
     if (value !== "all") {
-        // Display suggestions if none of the existing tasks match
         const suggestions = value === "water" ? waterTasks : energyTasks;
         if (todos.length === 0) {
             suggestions.forEach(task => {
@@ -156,7 +152,6 @@ function removeLocalTodos(todo) {
     localStorage.setItem("todos", JSON.stringify(todos));
 }
 
-// Add initial tasks
 function addInitialTasks() {
     waterTasks.forEach(task => addTodoItem(task));
     energyTasks.forEach(task => addTodoItem(task));
